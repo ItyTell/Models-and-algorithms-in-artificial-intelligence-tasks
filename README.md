@@ -3,6 +3,7 @@ Labs for the course "Models and algorithms in artificial intelligence tasks". Mo
 
 
 
+
 Ми отримали файл такого вигляду:
 
      0 8.717e+004
@@ -81,6 +82,8 @@ from matplotlib import pyplot as plt
     ax.plot(t,x, color = 'red')
     ax.tick_params(labelcolor='tab:orange')
     plt.show()
+    
+    ![98e8c44b-eb35-4ab4-8fc8-d7f8b8fb4912](https://user-images.githubusercontent.com/89577338/234518016-f44782c9-27cc-4786-bae6-8abaae609de2.png)
 
 Була поставлена задача зостосувати до цих данних Фурьє перетворення.
 
@@ -106,6 +109,8 @@ from matplotlib import pyplot as plt
 
 Отримуємо графік:
 
+![516c7f05-9d64-4549-89e2-7b16fd8d3dbf](https://user-images.githubusercontent.com/89577338/234518197-a3ad9f95-3c40-4c7b-ae2c-129f6b7a8159.png)
+
 Це саме ті дві частоти. Щоб краще зрозуміти, яка тут махінація вийшла пограємось з параметрами, що я взяв з голови на початку (там де були два сінуси)
 
 Додамо наприклад амплітуду 2 до другого сінуса 
@@ -116,7 +121,12 @@ from matplotlib import pyplot as plt
 
 Отримаємо:
 
+https://img3.teletype.in/files/a8/45/a845b33f-f6a7-4b7e-a497-23da2ac408f6.png
+
 Можна так само додати амплітуду і до першого сінуса, вийде аналогічно:
+
+https://img3.teletype.in/files/a4/23/a4234043-035f-461c-92ab-7dbee680ec40.png
+
 Поняли, да
 
 Також можна наприклад поміняти період (частоту) синуса:
@@ -126,6 +136,9 @@ from matplotlib import pyplot as plt
     x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 300 * t)
 
 Отримаємо:
+
+https://img4.teletype.in/files/f3/6b/f36b9d82-c769-4943-865d-3ca9b30666f2.png
+
 Поняли да? Воно рухається !!!
 
 Ну і короче так можна визначити приблизні частоти, що утворюють наш сигнал, ну і звісно там буде шум адже наш сигнал із реального світу тому він буде кривий трохи.
@@ -146,6 +159,8 @@ from matplotlib import pyplot as plt
     ax.plot(freq[L], PSD[L], color = 'red')
     ax.tick_params(labelcolor='tab:orange')
     plt.show()
+    
+https://img2.teletype.in/files/10/97/1097d5b5-6bd8-4bf2-92db-bba27db6bd93.png
 
 Зовсім не кравиво
 
@@ -161,4 +176,4 @@ from matplotlib import pyplot as plt
     plt.show()
 
 Отримуємо:
-
+https://img3.teletype.in/files/a6/67/a6674c89-3abc-4a28-b304-c0ad565dd100.png
