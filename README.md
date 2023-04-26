@@ -121,9 +121,11 @@ from matplotlib import pyplot as plt
 
 Отримаємо:
 
+
 ![зображення](https://user-images.githubusercontent.com/89577338/234519311-96aa2d0b-b40c-479c-93be-7852a844b793.png)
 
 Можна так само додати амплітуду і до першого сінуса, вийде аналогічно:
+
 
 ![зображення](https://user-images.githubusercontent.com/89577338/234519336-a27ec61f-dbdd-4aa4-a75f-489b29dca881.png)
 
@@ -136,6 +138,7 @@ from matplotlib import pyplot as plt
     x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 300 * t)
 
 Отримаємо:
+
 
 ![зображення](https://user-images.githubusercontent.com/89577338/234519385-0000a701-8f2c-4662-930e-d556ab52c0cb.png)
 
@@ -176,4 +179,6 @@ from matplotlib import pyplot as plt
     plt.show()
 
 Отримуємо:
+
+
 ![зображення](https://user-images.githubusercontent.com/89577338/234519446-c07ca2ce-4cff-4a2e-b98e-2c1641689903.png)
