@@ -36,7 +36,7 @@ Labs for the course "Models and algorithms in artificial intelligence tasks". Mo
      0.005368 -2.765e+005
      0.005856 -5.377e+005
 
-................................................
+    ................................................
 
 Проаналізуємо цей файл у Jupyter notebook
 
@@ -47,24 +47,24 @@ from matplotlib import pyplot as plt
 
 Загрузимо файл, записавши перші числа у список t (від слова час) і другі числа у список x ( від слова з трьох букв):
 
-file = open("Fragment Full Data D1.prn", "r")
-x = []
-t = []
-for l in file:
-    l = l.split()
-    t.append(float(l[0]))
-    x.append(float(l[1]))
-file.close()
-x = np.array(x)
+    file = open("Fragment Full Data D1.prn", "r")
+    x = []
+    t = []
+    for l in file:
+        l = l.split()
+        t.append(float(l[0]))
+        x.append(float(l[1]))
+    file.close()
+    x = np.array(x)
 
 Подивимось на те, що собою являють перші числа ( проаналізувавши їх графік):
 
-fig, ax = plt.subplots()
-plt.title("Перші числа", color = 'Orange', fontsize=15)
-ax.set_facecolor('#232323')
-ax.plot(t, color = 'red')
-ax.tick_params(labelcolor='tab:orange')
-plt.show()
+    fig, ax = plt.subplots()
+    plt.title("Перші числа", color = 'Orange', fontsize=15)
+    ax.set_facecolor('#232323')
+    ax.plot(t, color = 'red')
+    ax.tick_params(labelcolor='tab:orange')
+    plt.show()
 
 Очевидно, що це часова пряма (звідки є t), насправді Мостовий те саме сказав, хз навіщо я оце клоунячив. 
 
@@ -72,12 +72,12 @@ plt.show()
 
 Тепер вже побудуємо графік x(t):
 
-fig, ax = plt.subplots()
-plt.title("Данний сигнал", color = 'Orange', fontsize=15)
-ax.set_facecolor('#232323')
-ax.plot(t,x, color = 'red')
-ax.tick_params(labelcolor='tab:orange')
-plt.show()
+    fig, ax = plt.subplots()
+    plt.title("Данний сигнал", color = 'Orange', fontsize=15)
+    ax.set_facecolor('#232323')
+    ax.plot(t,x, color = 'red')
+    ax.tick_params(labelcolor='tab:orange')
+    plt.show()
 
 Була поставлена задача зостосувати до цих данних Фурьє перетворення.
 
@@ -85,21 +85,21 @@ plt.show()
 
 Нехай у нас э такий сигнал (позначення ті самі):
 
-dt = 0.001
-t = np.arange(0, 0.2, dt)
-x = np.sin(2 * np.pi * 30 * t) + np.sin(2 * np.pi * 70 * t)
+    dt = 0.001
+    t = np.arange(0, 0.2, dt)
+    x = np.sin(2 * np.pi * 30 * t) + np.sin(2 * np.pi * 70 * t)
 
 Я вибрав частоти 2 * np.pi * 30 та 2 * np.pi * 70.
 
 Застосуємо перетворення Фур'є:
 
-n = len(t)                                                                 # кількість вимірів (кількість записів у файлі)
-fhat =np.fft.fft(x, n)                                              # функція з бібліотеки шо робить Фур'є
-PSD = np.real(fhat * np.conj(fhat) )                        # модуль результата перетворення 
-                                                                               # (щоб позбутися комплексних значень)
-freq = (1 / dt * n) * np.arange(n)                             # масив частот
-L = np.arange(1, np.floor(n/2),  dtype = 'int')          # беремо лише ліву половину графіка
-                                                                               # бо він семетричний
+    n = len(t)                                                                 # кількість вимірів (кількість записів у файлі)
+    fhat =np.fft.fft(x, n)                                              # функція з бібліотеки шо робить Фур'є
+    PSD = np.real(fhat * np.conj(fhat) )                        # модуль результата перетворення 
+                                                                                   # (щоб позбутися комплексних значень)
+    freq = (1 / dt * n) * np.arange(n)                             # масив частот
+    L = np.arange(1, np.floor(n/2),  dtype = 'int')          # беремо лише ліву половину графіка
+                                                                                   # бо він семетричний
 
 Отримуємо графік:
 
@@ -107,9 +107,9 @@ L = np.arange(1, np.floor(n/2),  dtype = 'int')          # беремо лише
 
 Додамо наприклад амплітуду 2 до другого сінуса 
 
-dt = 0.001
-t = np.arange(0, 0.2, dt)
-x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 70 * t)
+    dt = 0.001
+    t = np.arange(0, 0.2, dt)
+    x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 70 * t)
 
 Отримаємо:
 
@@ -118,9 +118,9 @@ x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 70 * t)
 
 Також можна наприклад поміняти період (частоту) синуса:
 
-dt = 0.001
-t = np.arange(0, 0.2, dt)
-x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 300 * t)
+    dt = 0.001
+    t = np.arange(0, 0.2, dt)
+    x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 300 * t)
 
 Отримаємо:
 Поняли да? Воно рухається !!!
@@ -129,33 +129,33 @@ x = np.sin(2 * np.pi * 30 * t) + 2 * np.sin(2 * np.pi * 300 * t)
 
 Повернемось до нашого сигналу. У нас був список t з часом та список x з самим сигналом. Зробимо претворення:
 
-n = len(t)
-fhat =np.fft.fft(x, n)
-PSD = np.real(fhat * np.conj(fhat) )/ n
-freq = (1/t[n - 1]) * np.arange(n)            # там були моменти часу dt * n а тут просто t[n-1]
-L = np.arange(1, np.floor(n/2),  dtype = 'int')
+    n = len(t)
+    fhat =np.fft.fft(x, n)
+    PSD = np.real(fhat * np.conj(fhat) )/ n
+    freq = (1/t[n - 1]) * np.arange(n)            # там були моменти часу dt * n а тут просто t[n-1]
+    L = np.arange(1, np.floor(n/2),  dtype = 'int')
 
 При побудові графіка отримаємо:
 
-fig, ax = plt.subplots()
-plt.title("Дані отримані після перетворення Фурьє", color = 'Orange')
-ax.set_facecolor('#232323')
-ax.plot(freq[L], PSD[L], color = 'red')
-ax.tick_params(labelcolor='tab:orange')
-plt.show()
+    fig, ax = plt.subplots()
+    plt.title("Дані отримані після перетворення Фурьє", color = 'Orange')
+    ax.set_facecolor('#232323')
+    ax.plot(freq[L], PSD[L], color = 'red')
+    ax.tick_params(labelcolor='tab:orange')
+    plt.show()
 
 Зовсім не кравиво
 
 Якщо взяти наприклад частоти до 150 то буде видно краще:
 
-L = np.arange(1, np.floor(3*n/ 40),  dtype = 'int')  
-# було n/2 і це було до 1000, стало 3n/40  тобто до 150
-fig, ax = plt.subplots()
-plt.title("Дані отримані після перетворення Фурьє", color = 'Orange')
-ax.set_facecolor('#232323')
-ax.plot(freq * L, PSD[L], color = 'red')
-ax.tick_params(labelcolor='tab:orange')
-plt.show()
+    L = np.arange(1, np.floor(3*n/ 40),  dtype = 'int')  
+    # було n/2 і це було до 1000, стало 3n/40  тобто до 150
+    fig, ax = plt.subplots()
+    plt.title("Дані отримані після перетворення Фурьє", color = 'Orange')
+    ax.set_facecolor('#232323')
+    ax.plot(freq * L, PSD[L], color = 'red')
+    ax.tick_params(labelcolor='tab:orange')
+    plt.show()
 
 Отримуємо:
 
