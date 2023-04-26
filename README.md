@@ -2,6 +2,7 @@
 Labs for the course "Models and algorithms in artificial intelligence tasks". Mostly done in Jupyter notebook
 
 
+
 Ми отримали файл такого вигляду:
 
      0 8.717e+004
@@ -65,6 +66,8 @@ from matplotlib import pyplot as plt
     ax.plot(t, color = 'red')
     ax.tick_params(labelcolor='tab:orange')
     plt.show()
+    
+![58eb3eb8-3f51-469c-8613-89189bac0d65](https://user-images.githubusercontent.com/89577338/234517738-adc421e5-73b4-4e43-8cf6-07396fd3f001.png)
 
 Очевидно, що це часова пряма (звідки є t), насправді Мостовий те саме сказав, хз навіщо я оце клоунячив. 
 
