@@ -83,7 +83,7 @@ from matplotlib import pyplot as plt
     ax.tick_params(labelcolor='tab:orange')
     plt.show()
     
-    ![98e8c44b-eb35-4ab4-8fc8-d7f8b8fb4912](https://user-images.githubusercontent.com/89577338/234518016-f44782c9-27cc-4786-bae6-8abaae609de2.png)
+![98e8c44b-eb35-4ab4-8fc8-d7f8b8fb4912](https://user-images.githubusercontent.com/89577338/234518016-f44782c9-27cc-4786-bae6-8abaae609de2.png)
 
 Була поставлена задача зостосувати до цих данних Фурьє перетворення.
 
@@ -121,11 +121,11 @@ from matplotlib import pyplot as plt
 
 Отримаємо:
 
-https://img3.teletype.in/files/a8/45/a845b33f-f6a7-4b7e-a497-23da2ac408f6.png
+![зображення](https://user-images.githubusercontent.com/89577338/234519311-96aa2d0b-b40c-479c-93be-7852a844b793.png)
 
 Можна так само додати амплітуду і до першого сінуса, вийде аналогічно:
 
-https://img3.teletype.in/files/a4/23/a4234043-035f-461c-92ab-7dbee680ec40.png
+![зображення](https://user-images.githubusercontent.com/89577338/234519336-a27ec61f-dbdd-4aa4-a75f-489b29dca881.png)
 
 Поняли, да
 
@@ -137,7 +137,7 @@ https://img3.teletype.in/files/a4/23/a4234043-035f-461c-92ab-7dbee680ec40.png
 
 Отримаємо:
 
-https://img4.teletype.in/files/f3/6b/f36b9d82-c769-4943-865d-3ca9b30666f2.png
+![зображення](https://user-images.githubusercontent.com/89577338/234519385-0000a701-8f2c-4662-930e-d556ab52c0cb.png)
 
 Поняли да? Воно рухається !!!
 
@@ -160,7 +160,7 @@ https://img4.teletype.in/files/f3/6b/f36b9d82-c769-4943-865d-3ca9b30666f2.png
     ax.tick_params(labelcolor='tab:orange')
     plt.show()
     
-https://img2.teletype.in/files/10/97/1097d5b5-6bd8-4bf2-92db-bba27db6bd93.png
+![зображення](https://user-images.githubusercontent.com/89577338/234519418-2d819ebd-ff17-4e12-a9ff-03d8ff22a429.png)
 
 Зовсім не кравиво
 
@@ -176,4 +176,4 @@ https://img2.teletype.in/files/10/97/1097d5b5-6bd8-4bf2-92db-bba27db6bd93.png
     plt.show()
 
 Отримуємо:
-https://img3.teletype.in/files/a6/67/a6674c89-3abc-4a28-b304-c0ad565dd100.png
+![зображення](https://user-images.githubusercontent.com/89577338/234519446-c07ca2ce-4cff-4a2e-b98e-2c1641689903.png)
